@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   API = 'http://localhost:3000';
 
   // Declare empty list of people
-  people: any[] = [];
+  public people: any[] = [];
 
   constructor(private http: HttpClient) { }
 
@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
   // Add one person to the API
   addPerson(name, age) {
     this.http.post(`${this.API}/users`, { name, age })
-      .map((res: any) => res.json())
+      // .map((res: any) => res.json())
       .subscribe(() => {
         this.getAllPeople();
       });
@@ -37,8 +37,8 @@ export class AppComponent implements OnInit {
   // Get all users from the API
   getAllPeople() {
     this.http.get(`${this.API}/users`)
-      .map((res: any) => res.json())
-      .subscribe(people => {
+      // .map((res: any) => res.json())
+      .subscribe((people: any[]) => {
         console.log(people);
         this.people = people;
       });

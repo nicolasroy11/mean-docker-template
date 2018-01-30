@@ -17,8 +17,8 @@ services:
       - 9229:9229 #bound to debugging outlet attached to local Node from Docker
     ## set your startup file here
     command: node --inspect=0.0.0.0:9229 server.js
-    # links:
-    #   - mongodb # link this service to the database service
+    links:
+      - mongodb # link this service to the database service
 
   mongodb: # name of the third service
     image: mongo # specify image to build container from
