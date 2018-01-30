@@ -12,7 +12,7 @@ $ cd mean-docker-template
  $ docker-compose up -d
  ```
 
- This will build the three containers if they don't already exist, then start them.
+ This will build the three containers if they don't already exist, then start them. You can now view the application in a browser at http://localhost:4200/, which is the entry point of the Angular app. The api the Angular client connects to for CRUD operations is reachable on http://localhost:3000/.
 
  The project comes with a preconfigured .vscode/launch.json file which a "Docker: Attach to Node" configuration. To be able to use this, the alternate docker-compose.debug.yml file has to be invoked thus:
 
