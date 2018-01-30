@@ -1,0 +1,27 @@
+# compiled output
+angular-client//dist
+angular-client//dist-server
+angular-client//tmp
+angular-client//out-tsc
+
+# dependencies
+angular-client/node_modules
+express-server/node_modules
+
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+angular-client/npm-debug.log
+
+# e2e
+angular-client//e2e/*.js
+angular-client//e2e/*.map
+
+# System Files
+.DS_Store
