@@ -10,11 +10,15 @@ services:
 
   express: #name of the second service
     build: express-server # specify the directory of the Dockerfile
+    environment:
+      NODE_ENV: development
     ports:
-      - "3000:3000" #specify ports forwarding
-      - "5800:5800" #debug port for vs-code to attach
-    links:
-      - mongodb # link this service to the database service
+      - 3000:3000
+      - 9229:9229
+    ## set your startup file here
+    command: node --inspect=0.0.0.0:9229 server.js
+    # links:
+    #   - mongodb # link this service to the database service
 
   mongodb: # name of the third service
     image: mongo # specify image to build container from
