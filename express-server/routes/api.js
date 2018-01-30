@@ -18,12 +18,12 @@ const userSchema = new mongoose.Schema({
 // create mongoose model
 // const User = mongoose.model('User', userSchema);
 
-/* GET api listing. */
+/* GET api listing */
 router.get('/', (req, res) => {
         res.send('api works');
 });
 
-/* GET all users. */
+/* GET all users */
 router.get('/users', (req, res) => {
     User.find({}, (err, users) => {
         if (err) res.status(500).send(error)
@@ -32,7 +32,7 @@ router.get('/users', (req, res) => {
     });
 });
 
-/* GET one users. */
+/* GET one users */
 router.get('/users/:id', (req, res) => {
     User.findById(req.param.id, (err, users) => {
         if (err) res.status(500).send(error)
@@ -41,7 +41,7 @@ router.get('/users/:id', (req, res) => {
     });
 });
 
-/* Create a user. */
+/* Create a user */
 router.post('/users', (req, res) => {
     let user = new User({
         name: req.body.name,
