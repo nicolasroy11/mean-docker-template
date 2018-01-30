@@ -6,5 +6,7 @@ This is a quick development template meant to speed up the scaffolding of Docker
  Then use Docker Compose
 
  - `$ docker-compose up -d`
- 
+
  This will build the three containers if they don't already exist, then start them.
+
+ Stay tuned; more to come
