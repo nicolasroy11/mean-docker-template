@@ -1,6 +1,6 @@
 # Overview
 
-This is a quick development template meant to speed up the scaffolding of Docker-containerized MEAN applications with vs-code debugging extensions. There are three containers (angular-client, express-server, and mongodb) that can be run simultaneously using docker compose. First cd into the main folder:
+This is a quick development template meant to speed up the scaffolding of Docker-containerized MEAN applications with vs-code debugging extensions. There are three containers (angular-client, express-server, and mongodb) that are run simultaneously and properly connected using docker compose. First cd into the main folder:
 
 ```
 $ cd mean-docker-template
